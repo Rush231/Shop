@@ -1,7 +1,7 @@
 from database import db
 
 
-class pedidos(db.Model):
+class Pedido(db.Model):
     __tablename__ = 'pedidos'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -15,5 +15,4 @@ class pedidos(db.Model):
 
     def __repr__(self):
         return f'<Pedido {self.id} - Usuario {self.usuario_id} - Estado: {self.estado}>'
-    
     

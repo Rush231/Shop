@@ -1,7 +1,7 @@
 from database import db
 
 
-class ofertas(db.Model):
+class Oferta(db.Model):
     __tablename__ = 'ofertas'
 
     id = db.Column(db.Integer, primary_key=True)

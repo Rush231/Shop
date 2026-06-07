@@ -9,8 +9,20 @@ from model.categorias import Categoria
 from model.productos import Producto  # Asegúrate de usar el nombre con el que guardaste el archivo
 from model.imagen_productos import ImagenProducto
 from database import db
-from model.Usuario import Usuario
-from model.productos import productos_bp
+from model.consultas import Consulta
+from model.categoria_productos import CategoriaProducto
+from model.ofertas import Oferta
+from model.pedidos import Pedido
+from model.detalle_pedidos import Detalle_Pedido
+from model.valoraciones import Valoracion
+from model.historial_pedidos import Historial_Pedido
+from model.metodos_pago import MetodoPago
+from model.direcciones import Direccion
+from model.envios import Envio
+from model.direcciones import Direccion
+from model.consultas import Consulta
+from routes.metodos_pago import pagos_bp
+from routes.productos import productos_bp
 # Importamos el Blueprint que acabamos de crear
 from routes.auth_routes import auth_bp
 
@@ -40,3 +52,4 @@ if __name__ == '__main__':
 
 
     app.register_blueprint(productos_bp, url_prefix='/api')
+    app.register_blueprint(pagos_bp, url_prefix='/api')
